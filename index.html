@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        } 
+        header {
+            background-color: #2b294f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #004080;
+        }
+
+        /* Course Buttons */
+        .course-btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: #004080;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .course-btn:hover {
+            background-color: #2b294f;
+            transform: scale(1.05);
+        }
+
+        /* Course Details Box */
+        .course-details {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e6f0ff;
+            border-radius: 5px;
+            display: none;
+        }
+
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Iqra University</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>IQRA University provides quality education and excellent faculty. We focus on preparing students for a successful future.</p>
+</section>
+
+<section id="courses">
+    <h2>Our Courses</h2>
+
+    <div class="course-btn" onclick="showCourse('bs')">Bachelor of Science</div>
+    <div class="course-btn" onclick="showCourse('ba')">Bachelor of Arts</div>
+    <div class="course-btn" onclick="showCourse('cs')">Computer Science</div>
+    <div class="course-btn" onclick="showCourse('bba')">Business Administration</div>
+
+    <!-- Course Information Area -->
+    <div id="courseInfo" class="course-details"></div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@iqra.edu</p>
+    <p>Phone: +123-456-7890</p>
+    <p>Address: 123 University Road</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 IQRA University. All rights reserved.</p>
+</footer>
+
+<script>
+function showCourse(course) {
+    let info = document.getElementById("courseInfo");
+    info.style.display = "block";
+
+    if(course === 'bs') {
+        info.innerHTML = "<h3>Bachelor of Science</h3><p>Duration: 4 Years<br>Focuses on scientific and analytical studies preparing students for research and technical careers.</p>";
+    }
+    else if(course === 'ba') {
+        info.innerHTML = "<h3>Bachelor of Arts</h3><p>Duration: 4 Years<br>Offers programs in humanities, social sciences, and creative studies.</p>";
+    }
+    else if(course === 'cs') {
+        info.innerHTML = "<h3>Computer Science</h3><p>Duration: 4 Years<br>Covers programming, software development, AI, and data science.</p>";
+    }
+    else if(course === 'bba') {
+        info.innerHTML = "<h3>Business Administration</h3><p>Duration: 4 Years<br>Focuses on management, finance, marketing, and entrepreneurship.</p>";
+    }
+}
+</script>
+
+</body>
+</html>
+
